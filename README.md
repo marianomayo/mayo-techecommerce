@@ -11,7 +11,7 @@
 
 ### *El público objetivo ronda entre los 15 años y los 70 años*
 
-### La tipógrafía a utilizar será [Montserrat](https://fonts.google.com/share?selection.family=Montserrat:wght@600%7COpen%2BSans:wght@300%7CSpectral:wght@200)
+### Las tipógrafías a utilizar serán [Montserrat](https://fonts.google.com/share?selection.family=Montserrat:wght@600|PT+Serif|Spectral:wght@200)
 
 ### Paleta de colores:
 ![Paleta](https://i.postimg.cc/sxNhL24t/Adobe-Color-Ecommerce.jpg)
