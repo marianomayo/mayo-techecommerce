@@ -17,3 +17,8 @@
 ![Paleta](https://i.postimg.cc/sxNhL24t/Adobe-Color-Ecommerce.jpg)
 
 
+ ### FIGMA
+ [FIGMA](https://www.figma.com/file/UWeiTz94pFARK5emQJ9JVo/icaro-ecommerce?type=design&node-id=0-1&mode=design&t=rFCNn5yARxk1Jq2p-0)
+
+
+
