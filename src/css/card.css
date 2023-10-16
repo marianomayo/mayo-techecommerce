@@ -1,0 +1,153 @@
+
+article {
+    transition: transform 0.2s;
+}
+
+article:hover {
+    transform: scale(1.05); 
+}
+
+article .button-article button {
+    cursor: pointer;
+}
+article .button-article button a {
+    text-decoration: none;
+    color: black;
+}
+article .button-article button {
+    transition: background-color 0.2s; 
+}
+
+article .button-article button:hover {
+    background-color: #286cff;
+}
+article {
+    overflow: hidden;
+    transition: transform 0.2s; /* Agrega una transición suave de 0.2 segundos */
+}
+
+article figure img {
+    width: 100%; /* Asegura que la imagen ocupe todo el ancho del contenedor */
+}
+
+article figure img:hover {
+    transform: scale(1.1); /* Escala la imagen al 110% en el hover */
+}
+
+.card-section {
+    width: 85%; 
+    max-width: 85%; 
+    margin: 0 auto; 
+}
+.card-section h1 {
+    border-bottom: 1px solid #F0F3F5;
+    margin-bottom: 1.5rem;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.carrousel-container {
+    margin-bottom: 2rem;
+}
+
+.card-section .carrousel figure {
+    text-align: center; 
+}
+
+.card-section .carrousel figure img {   
+    max-width: 100%; 
+    height: auto; 
+}
+
+.card-section .carrousel {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.card-section article {
+    display: block;
+    border: 1px solid #ccc;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 5px;
+    margin: 0;
+    text-align: center;
+    margin: 1rem;
+    max-width: 30%; 
+}
+
+.card-section article h4 {
+    text-align: center;
+    border-top: 1px solid #F0F3F5;
+    font-family: 'Montserrat', sans-serif !important;
+}
+
+.card-section article p {    
+    font-family: 'PT Serif', serif;
+    font-size: 14px; 
+}
+
+
+.card-section article button {
+    background-color: #FA7F2E;
+    border-color: transparent;    
+    border-radius: 5px;
+    width: 35%;
+}
+
+.card-section article .button-article {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 1rem;
+}
+
+
+.card-section article {
+    display: none;
+}
+
+.card-section article:nth-child(-n+2) {
+    display: block;
+}
+
+.texto-marca{
+    text-align: justify;
+}
+
+.marcas-title{
+    text-align: center;
+}
+
+@media (min-width: 600px) {
+
+    .card-section article {
+        width: 45%; 
+    }
+
+    .card-section article {
+        display: none;
+    }
+
+    .card-section article:nth-child(-n+3) {
+        display: block;
+    }
+
+    .card-section article button {
+        width: 25%;
+    }
+}
+
+
+@media (min-width: 1000px) {
+
+    .card-section article {
+        width: 30%; 
+    }
+
+    .card-section article {
+        display: block;
+    }
+
+    .card-section article button {
+        width: 20%;
+    }
+}
