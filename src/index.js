@@ -1,10 +1,11 @@
 const express = require("express");
 
-
 const PORT = 3000;
 
+const ProductRouter = require("./Router/ProductRouter");
+
 const middlewareDePrueba = (req, res, next) => {
-  console.log("Llego una petición", req.body);
+  console.log("Llego una petición al servidor", req.body);
   next();
 };
 
@@ -14,10 +15,6 @@ app.use(express.json());
 
 app.use(middlewareDePrueba);
 
-
-
-app.get("/", (req, res) => {
-  res.send("Hola");
-});
+app.use("/product", ProductRouter);
 
 app.listen(PORT, () => console.log(`Servidor corriendo en el puerto: ${PORT}`));
