@@ -9,10 +9,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=PT+Serif&family=Spectral:wght@200&display=swap" rel="stylesheet">
     <script src="./js/responsiveMenu.js"></script>
     <link rel="stylesheet" href="./css/style.css">
-    <link rel="stylesheet" href="./css/form-log-signup.css">
+    <link rel="stylesheet" href="./css/cart.css">
     <link rel="icon" type="image/x-icon" href="./images/icons/favicon.jpg">
-    <link rel="icon" type="image/x-icon" href="./images/icons/favicon.jpg">
-    <title>Techecommerce -  Log In </title>
+    <title>Techecommerce -  Home </title>
 </head>
 <body>
     <header>
@@ -38,36 +37,38 @@
         </div>
     </section>
 
-    <section class="card">        
-            <h2 class="login">Ingresar</h2>
-            <form>
-                <div class="form-group">
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email" required placeholder="Email">
-                </div>
-                <div class="form-group">
-                    <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" required placeholder="Contraseña">
-                </div>
-
-                <div class="forgotpassword">
-                    <p><a href="">¿Has olvidado la contraseña?</a></p>
-                </div>
-               
-                <div class="form-group">
-                    <button type="submit">Ingresar</button>
-                </div>
-            </form>
-            <div>
-                <div class="line"></div>
-                <div class="question-acount">
-                    <p>¿Todavia no tienes cuenta? <span><a href="signup.html">Registrate</a></span></p>
-                </div>
-            </div>
+    <section class="cart">
+        <h1>Carrito</h1>
+        <div class="cart-item">
+            <img src="./images/notebook-prueba.jpg" alt="Producto 1">
         
+            <p class="product-name">Notebook de prueba</p>
+            <button>-</button>
+            <input type="number" value="1" readonly>
+            <button>+</button>                
+            <p class="item-price">$100.000</p>            
+            <i class="bi bi-trash3"></i>
+        </div>
+        <div class="cart-item">
+            <img src="./images/notebook-prueba.jpg" alt="Producto 1">
+        
+            <p class="product-name">Notebook de prueba</p>
+            <button>-</button>
+            <input type="number" value="1" readonly>
+            <button>+</button>                
+            <p class="item-price">$100.000</p>            
+            <i class="bi bi-trash3"></i>
+        </div>
+
+
+        <div class="cart-item-pay">
+            <p class="product-name">Total</p>
+            <p class="item-price">$200.000</p>  
+            <button class="pay-cart">Pagar</button>
+        </div>
     </section>
 
-   
+    
 
     <footer>
         <div class="whatsapp-button">
@@ -118,6 +119,5 @@
         <h3>Copyright 2023</h3>
     </div>
         
-      
 </body>
 </html>
