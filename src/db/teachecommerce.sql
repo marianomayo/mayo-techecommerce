@@ -56,9 +56,11 @@ CREATE TABLE `marca` (
   `id_marca` int NOT NULL AUTO_INCREMENT,
   `vmarca` varchar(45) DEFAULT NULL,
   `bhabilitado` tinyint NOT NULL DEFAULT '1',
+  `vdescripcion` mediumtext,
+  `vpath` varchar(150) DEFAULT NULL,
   PRIMARY KEY (`id_marca`),
   UNIQUE KEY `pk_id_marca` (`id_marca`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -67,7 +69,7 @@ CREATE TABLE `marca` (
 
 LOCK TABLES `marca` WRITE;
 /*!40000 ALTER TABLE `marca` DISABLE KEYS */;
-INSERT INTO `marca` VALUES (1,'Apple',1),(2,'Msi',1),(3,'Logitech',1);
+INSERT INTO `marca` VALUES (1,'Apple',1,'Apple, Inc. es una empresa tecnológica multinacional estadounidense con sede en Cupertino, California. Apple es la empresa de tecnología más grande del mundo por ingresos, con US$394,3 mil millones de dólares en ingresos en 2022.','/assets/marcas/apple.jpg'),(2,'Msi',1,'Como marca de juegos líder mundial, MSI es el nombre más confiable en juegos y deportes electrónicos. Han dedicado innumerables horas y numerosos recursos a la comunidad de deportes electrónicos para apoyar a los jugadores más aspirantes del mundo y aprovechar su experiencia en juegos para optimizar el diseño de nuestros productos.','/assets/marcas/msi.png'),(3,'Logitech',1,'Una empresa suiza centrada en la innovación y la calidad, Logitech diseña productos y experiencias que tienen un lugar cotidiano en la vida de las personas. Durante más de 40 años, han expandido tanto su experiencia en diseño de productos como su alcance global.','/assets/marcas/gigabyte.png'),(4,'Dell',1,'Son un equipo diverso con perspectivas únicas.Impulsado por la ambición y el poder de la tecnología para fomentar el progreso humano. Inquebrantable en el compromiso con la igualdad, la confianza y el apoyo mutuos.','/assets/marcas/dell.png');
 /*!40000 ALTER TABLE `marca` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -145,8 +147,10 @@ SET character_set_client = @saved_cs_client;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` FUNCTION `formatear_apellido_nombre`(vapellido VARCHAR(255), vnombre VARCHAR(255)) RETURNS varchar(512) CHARSET utf8mb4
     DETERMINISTIC
-BEGIN
-    RETURN CONCAT(vnombre, ', ', vapellido);
+BEGIN
+
+    RETURN CONCAT(vnombre, ', ', vapellido);
+
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -165,12 +169,18 @@ DELIMITER ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` FUNCTION `formatear_timestamp`(ts TIMESTAMP) RETURNS varchar(16) CHARSET utf8mb4
     DETERMINISTIC
-BEGIN
-    DECLARE formatted_date VARCHAR(16);
-
-    SET formatted_date = DATE_FORMAT(ts, '%d/%m/%Y %H:%i');
-
-    RETURN formatted_date;
+BEGIN
+
+    DECLARE formatted_date VARCHAR(16);
+
+
+
+    SET formatted_date = DATE_FORMAT(ts, '%d/%m/%Y %H:%i');
+
+
+
+    RETURN formatted_date;
+
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -205,4 +215,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-30 10:56:01
+-- Dump completed on 2023-10-30 17:51:35
