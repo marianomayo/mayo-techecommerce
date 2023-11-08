@@ -6,7 +6,7 @@ const getAll = (req, res) => {
     ViewProductModel.getAll().then((product) => {
         res.status(200).send({ product });
     }).catch((e) => res.status(404).send({
-        e
+        'msg' : "Error al obtener los productos"
     }));
 }
 
@@ -24,7 +24,7 @@ const addProduct = (req, res) => {
                     "message": `El producto fue agregado correctamente` 
                 });
             }).catch((e) => res.status(404).send({
-                    e
+                    'msg' : "hubo un error al crear el producto"
                 }))
         }
     })
@@ -40,7 +40,7 @@ const editProduct = (req, res) => {
             "message": `El producto ${req.body.nombre} fue actualizado correctamente` 
         });
     }).catch((e) => res.status(404).send({
-        e
+        'msg' : "hubo un error al crear el producto"
     }))
     
 }
@@ -52,7 +52,7 @@ const getProductById = (req, res) => {
     ViewProductModel.getProductById(idParams).then((product) => {
         res.status(200).send({ product });
     }).catch((e) => res.status(404).send({
-        e
+        'msg' : `Error al obtener producto ${idParams}`
     }));
 }
 

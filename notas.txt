@@ -4,7 +4,8 @@ El objeto a insertar:
     "nombre": string,
     "descripcion": string,
     "fprecio": float,
-    "nmarca": int
+    "nmarca": int,
+    "nusuariocreador: 1
 }
 
 Sobre la marca y el nusuariocreador la idea es que mañana en algun formulario de creacion de producto que haya,

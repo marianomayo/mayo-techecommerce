@@ -26,9 +26,10 @@ app.use(express.static("public"));
 
 app.use("/", PageRouter); 
 
-app.use("/product", ProductRouter);
-
 app.use("/brand", BrandRouter);
+
+/*Entrega parte 4 product */
+app.use("/product", ProductRouter);
 
 app.listen(PORT, () => {
   db.authenticate().then(() => console.log("Conectado a la base de datos!"));
