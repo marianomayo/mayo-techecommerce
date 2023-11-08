@@ -4,7 +4,7 @@ const ProductController = require('../Controller/ProductController');
 
 const { validarErrores } = require("../Middlewares");
 const { idRequired } = require('../Middlewares/ParamsMiddleware');
-const { validateName, validateDescription, validatePrice, validateBrand } = require('../Middlewares/ProducMiddleware');
+const { validateName, validateDescription, validatePrice, validateBrand } = require('../Middlewares/ProductMiddleware');
 
 const ProductRouter = Router();
 
