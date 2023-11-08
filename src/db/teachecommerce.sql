@@ -1,3 +1,5 @@
+CREATE DATABASE  IF NOT EXISTS `teachecommerce` /*!40100 DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci */ /*!80016 DEFAULT ENCRYPTION='N' */;
+USE `teachecommerce`;
 -- MySQL dump 10.13  Distrib 8.0.34, for Win64 (x86_64)
 --
 -- Host: localhost    Database: teachecommerce
@@ -94,7 +96,7 @@ CREATE TABLE `producto` (
   KEY `fk_producto_marca_idx` (`id_marca`),
   CONSTRAINT `fk_producto_administrador` FOREIGN KEY (`nusuariocreador`) REFERENCES `administrador` (`id_administrador`),
   CONSTRAINT `fk_producto_marca` FOREIGN KEY (`id_marca`) REFERENCES `marca` (`id_marca`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -103,7 +105,7 @@ CREATE TABLE `producto` (
 
 LOCK TABLES `producto` WRITE;
 /*!40000 ALTER TABLE `producto` DISABLE KEYS */;
-INSERT INTO `producto` VALUES (1,'Notebook enviada desde postman','descripcion enviada desde postman mediante post',32,'2023-10-28 22:36:47',1,3),(2,'Notebook Numero 2 enviada desde postman','descripcion numero 2  enviada desde postman mediante post',4532.25,'2023-10-28 22:38:52',1,2),(3,'Notebook Numero 3 enviada desde postman','Actualizo la descripcion de la notebook numero 3 desde postman, actualizo precio',36520,'2023-10-28 22:39:48',1,3);
+INSERT INTO `producto` VALUES (1,'prueba actualizacion','celular descripcion actualiza',555.51,'2023-10-28 22:36:47',1,3),(2,'Notebook Numero 2 enviada desde postman','descripcion numero 2  enviada desde postman mediante post',4532.25,'2023-10-28 22:38:52',1,2),(3,'Notebook Numero 3 enviada desde postman','Actualizo la descripcion de la notebook numero 3 desde postman, actualizo precio',36520,'2023-10-28 22:39:48',1,3),(4,'celular','celular descripcion',69585.5,'2023-11-02 20:02:26',1,2);
 /*!40000 ALTER TABLE `producto` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -147,10 +149,8 @@ SET character_set_client = @saved_cs_client;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` FUNCTION `formatear_apellido_nombre`(vapellido VARCHAR(255), vnombre VARCHAR(255)) RETURNS varchar(512) CHARSET utf8mb4
     DETERMINISTIC
-BEGIN
-
-    RETURN CONCAT(vnombre, ', ', vapellido);
-
+BEGIN
+    RETURN CONCAT(vnombre, ', ', vapellido);
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -169,18 +169,12 @@ DELIMITER ;
 DELIMITER ;;
 CREATE DEFINER=`root`@`localhost` FUNCTION `formatear_timestamp`(ts TIMESTAMP) RETURNS varchar(16) CHARSET utf8mb4
     DETERMINISTIC
-BEGIN
-
-    DECLARE formatted_date VARCHAR(16);
-
-
-
-    SET formatted_date = DATE_FORMAT(ts, '%d/%m/%Y %H:%i');
-
-
-
-    RETURN formatted_date;
-
+BEGIN
+    DECLARE formatted_date VARCHAR(16);
+
+    SET formatted_date = DATE_FORMAT(ts, '%d/%m/%Y %H:%i');
+
+    RETURN formatted_date;
 END ;;
 DELIMITER ;
 /*!50003 SET sql_mode              = @saved_sql_mode */ ;
@@ -215,4 +209,4 @@ DELIMITER ;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2023-10-30 17:51:35
+-- Dump completed on 2023-11-08 19:22:35
