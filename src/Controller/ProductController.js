@@ -4,7 +4,12 @@ const BrandModel = require('../Model/BrandModel');
 
 const getAll = (req, res) => {    
     ViewProductModel.getAll().then((product) => {
-        res.status(200).send({ product });
+        console.log(product.length)
+        if(product.length > 0){
+            res.status(200).send({ product });
+        }else{
+            res.status(400).send({ 'msg': 'No hay productos' });
+        }
     }).catch((e) => res.status(404).send({
         'msg' : "Error al obtener los productos"
     }));
